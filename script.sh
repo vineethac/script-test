@@ -11,8 +11,3 @@ ls -la
 find .
 
 echo 'done!'
-
-yum install fio -y
-
-fio --version
-
