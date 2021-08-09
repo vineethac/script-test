@@ -10,4 +10,6 @@ ls -la
 
 find .
 
+kubectl version
+
 echo 'done!'
