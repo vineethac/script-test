@@ -8,7 +8,6 @@ import socket
 import sys
 import time
 import datetime 
-import pytz
 from optparse import OptionParser
 
 # hostname = sys.argv[1]
@@ -28,7 +27,6 @@ parser.add_option("--time",
 # IP lookup from hostname
 def dns_to_ip(hostname, seconds):
     start_time = time.time()
-    IST = pytz.timezone('Asia/Kolkata')
     while True:
         
         current_time = time.time()
@@ -40,9 +38,9 @@ def dns_to_ip(hostname, seconds):
         else:
             try:
                 ip = socket.gethostbyname(hostname)
-                print(f'{datetime.datetime.now(IST)} DNS {hostname} IP Address is {ip}')
+                print(f'{datetime.datetime.now().astimezone()} DNS {hostname} IP Address is {ip}')
             except socket.gaierror as e:
-                print(f'{datetime.datetime.now(IST)} Unable to resolve hostname! Error is {e}.')
+                print(f'{datetime.datetime.now().astimezone()} Unable to resolve hostname! Error is {e}.')
 
         time.sleep(1)
 
