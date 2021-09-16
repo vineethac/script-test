@@ -38,7 +38,7 @@ def dns_to_ip(hostname, seconds):
         else:
             try:
                 ip = socket.gethostbyname(hostname)
-                print(f'{datetime.datetime.now().astimezone()} DNS {hostname} IP Address is {ip}')
+                # print(f'{datetime.datetime.now().astimezone()} DNS {hostname} IP Address is {ip}')
             except socket.gaierror as e:
                 print(f'{datetime.datetime.now().astimezone()} Unable to resolve hostname! Error is {e}.')
 
