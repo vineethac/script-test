@@ -8,6 +8,7 @@ import socket
 import sys
 import time
 import datetime 
+import pytz
 from optparse import OptionParser
 
 # hostname = sys.argv[1]
