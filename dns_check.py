@@ -42,6 +42,6 @@ def dns_to_ip(hostname, seconds):
             except socket.gaierror as e:
                 print(f'{datetime.datetime.now().astimezone()} Unable to resolve hostname! Error is {e}.')
 
-        time.sleep(1)
+        time.sleep(5)
 
 dns_to_ip(options.hostname, options.seconds)
